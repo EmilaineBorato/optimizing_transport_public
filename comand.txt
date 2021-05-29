@@ -1,0 +1,32 @@
+## List topics 
+
+kafka-topics --list --zookeeper localhost:2181
+
+## Delete topics
+
+kafka-topics --zookeeper localhost:2181 --delete --topic "com.udacity.cta.producer.arrival"
+kafka-topics --zookeeper localhost:2181 --delete --topic "com.udacity.cta.producer.weather"
+kafka-topics --zookeeper localhost:2181 --delete --topic "com.udacity.cta.producer.turnstile"
+
+
+## producer data
+
+kafka-console-producer --topic "com.udacity.cta.producer.arrival" --broker-list localhost:9092
+kafka-console-producer --topic "com.udacity.cta.producer.weather" --broker-list localhost:9092
+kafka-console-producer --topic "cta.producer.turnstile" --broker-list localhost:9092
+
+
+## DROP TABLE AND TERMINATE QUERIES
+
+$ ksql
+$ SHOW TABLES;
+$ SHOW QUERIES;
+$ TERMINATE CTAS_TURNSTILE_SUMMARY_0;
+$ DROP TABLE TURNSTILE_SUMMARY;
+$ DORP TABLE TURNSTILE;
+
+## RESULTS
+kafka-console-consumer --bootstrap-server localhost:9092 --topic com.udacity.cta.stations --from-beginning
+
+SELECT * FROM TURNSTILE LIMIT 5;
+
