@@ -4,8 +4,6 @@ In this project, you will construct a streaming event pipeline around Apache Kaf
 
 When the project is complete, you will be able to monitor a website to watch trains move from station to station.
 
-![Final User Interface](images/ui.png)
-
 
 ## Prerequisites
 
@@ -19,9 +17,6 @@ The following are required to complete this project:
 
 The Chicago Transit Authority (CTA) has asked us to develop a dashboard displaying system status for its commuters. We have decided to use Kafka and ecosystem tools like REST Proxy and Kafka Connect to accomplish this task.
 
-Our architecture will look like so:
-
-![Project Architecture](images/diagram.png)
 
 ### Documentation
 In addition to the course content you have already reviewed, you may find the following examples and documentation helpful in completing this assignment:
@@ -100,3 +95,7 @@ Once the simulation is running, you may hit `Ctrl+C` at any time to exit.
 5. `python server.py`
 
 Once the server is running, you may hit `Ctrl+C` at any time to exit.
+
+Our architecture will look like so:
+
+![Project Architecture](images/diagram.png)
