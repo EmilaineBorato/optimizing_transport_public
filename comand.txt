@@ -16,17 +16,19 @@ kafka-console-producer --topic "com.udacity.cta.producer.weather" --broker-list 
 kafka-console-producer --topic "cta.producer.turnstile" --broker-list localhost:9092
 
 
-## DROP TABLE AND TERMINATE QUERIES
+## Comands SQL
+# DROP TABLE AND TERMINATE QUERIES
 
 $ ksql
 $ SHOW TABLES;
 $ SHOW QUERIES;
+$ SELECT * FROM TURNSTILE LIMIT 5;
 $ TERMINATE CTAS_TURNSTILE_SUMMARY_0;
 $ DROP TABLE TURNSTILE_SUMMARY;
-$ DORP TABLE TURNSTILE;
+$ DROP TABLE TURNSTILE;
 
 ## RESULTS
 kafka-console-consumer --bootstrap-server localhost:9092 --topic com.udacity.cta.stations --from-beginning
 
-SELECT * FROM TURNSTILE LIMIT 5;
+
 
